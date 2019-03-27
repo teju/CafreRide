@@ -7,6 +7,8 @@
     <string name="address">#34/381, Edappally P.O,\nPadivattom, kochi – 682024</string>
     <string name="happy_customer">Hassle free experience, Good range of well maintained bikes.Bike was very well maintained and didnt have any issues all through. A wonderful experience from booking to return.A good experience overall.</string>
     <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="please_note">Please Note:\nCustomers need to bring along a copy of license,
         international driving permit, valid visa and passport as well as originals need to be verified.</string>
 </resources>

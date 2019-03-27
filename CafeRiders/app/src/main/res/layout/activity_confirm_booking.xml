@@ -7,25 +7,39 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="com.caferiders.ConfirmBooking">
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enjoy Your Ride"
-        android:textAlignment="center"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:textColor="@color/white"/>
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="40dp"
+            android:src="@drawable/arrow_left"
+            android:tint="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerVertical="true"
+            android:text="Enjoy Your Ride"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Booking Confirmed"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textSize="20dp"
         android:textStyle="bold"
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:textColor="@color/yellow"/>
+        android:textColor="@color/black"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,15 +50,15 @@
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:textColor="@color/yellow"/>
+        android:textColor="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="270dp"
         android:backgroundTint="@color/white"
         android:layout_marginLeft="20dp"
         android:orientation="vertical"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/rounded_button">
         <ImageView
             android:layout_width="match_parent"
@@ -52,60 +66,56 @@
             android:layout_height="100dp" />
         <TextView
             android:layout_width="wrap_content"
-            android:text="KTM RC"
+            android:text="Thunderbird"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:gravity="center"
-            android:layout_marginTop="20dp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content" />
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:layout_height="40dp">
+            android:layout_height="30dp">
             <Button
                 android:layout_width="120dp"
                 android:backgroundTint="@color/dark_gray"
-                android:text="200 CC"
+                android:text="350 CC"
                 android:textColor="@color/white"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_button_left"/>
-            <Button
-                android:layout_width="120dp"
-                android:backgroundTint="@color/background3"
-                android:text="390 CC"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_button_right"/>
+                android:background="@drawable/rounded_button"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp" />
+                    android:layout_width="30dp"
+                    android:src="@drawable/speedometer"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="30dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
                     android:textSize="18dp"
-                    android:text="35Kmpl"/>
+                    android:text="80Kmph"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
-                    android:text="milege"/>
+                    android:text="Speed Limit"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -113,13 +123,17 @@
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp" />
+                    android:layout_width="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/shield_key"
+                    android:layout_height="30dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textSize="18dp"
+                    android:layout_marginTop="8dp"
+
                     android:text="\u20B90"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,14 +150,17 @@
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp" />
+                    android:layout_width="30dp"
+                    android:src="@drawable/cash_100"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="30dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
+                    android:layout_marginTop="8dp"
                     android:layout_gravity="center"
-                    android:text="\u20B9200/day"/>
+                    android:text="\u20B9500/day"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -157,8 +174,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="From -> Vadapalani,Chennai"
+        android:text="From -> Padivattom, Kochi"
         android:layout_marginTop="20dp"
+        android:textStyle="bold"
         android:textSize="20dp"
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
@@ -169,20 +187,20 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:layout_height="wrap_content"
-            android:text="March 24th Sep\n2018\n10:AM" />
+            android:text="March 24th Sep\n2018\n10:00 AM" />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow_right_thick"
+            android:src="@drawable/arrow_right"
             android:layout_marginLeft="20dp"
-            android:tint="@color/yellow"
+            android:tint="@color/black"
             android:layout_marginRight="20dp"
             android:layout_gravity="center_vertical"/>
         <TextView
@@ -190,17 +208,18 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:layout_height="wrap_content"
-            android:text="March 24th Sep\n2018\n10:AM" />
+            android:text="March 25th Sep\n2018\n11:00 AM" />
 
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:textAlignment="center"
-        android:textColor="@color/yellow"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
-        android:text="\u20B9424.4"
+        android:text="\u20B9500/-"
+        android:textStyle="bold"
         android:textSize="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

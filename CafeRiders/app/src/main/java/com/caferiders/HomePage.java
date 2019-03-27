@@ -8,9 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,15 +55,29 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener,
     private Button book_now;
     private Dialog mBottomSheetDialog;
     private Button end_time,start_date,start_time,end_date;
+    private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.content_home);
         init();
         initData();
     }
     public void init() {
+        ImageView bike1 = (ImageView) findViewById(R.id.bike1);
+        ImageView bike2 = (ImageView)findViewById(R.id.bike2);
+        ImageView bike3 = (ImageView)findViewById(R.id.bike3);
+        ImageView bike4 = (ImageView)findViewById(R.id.bike4);
+        ImageView menu_click = (ImageView)findViewById(R.id.menu_click);
+
+        bike1.setOnClickListener(this);
+        bike2.setOnClickListener(this);
+        bike3.setOnClickListener(this);
+        bike4.setOnClickListener(this);
+        menu_click.setOnClickListener(this);
+
+
         pager_introduction = (ViewPager)findViewById(R.id.pager_introduction);
         pager_indicator = (LinearLayout)findViewById(R.id.viewPagerCountDots);
         happy_customers = (LinearLayout)findViewById(R.id.happy_customers);
@@ -80,6 +99,16 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener,
         start_time.setOnClickListener(this);
         end_date.setOnClickListener(this);
         end_time.setOnClickListener(this);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
     }
     public void initData() {
         setupHappyCustomers();
@@ -217,7 +246,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener,
         int day = myCalendar.get(Calendar.DATE);
         int hour = myCalendar.get(Calendar.HOUR);
         int min = myCalendar.get(Calendar.MINUTE);
-        if(view.getId() == R.id.book_now) {
+        if(view.getId() == R.id.book_now || view.getId() == R.id.bike1 || view.getId() == R.id.bike2 || view.getId() == R.id.bike3
+                || view.getId() == R.id.bike4) {
             mBottomSheetDialog.show();
         } else if(view.getId() == R.id.book_bike_now) {
             Intent i = new Intent(HomePage.this,BikeList.class);
@@ -268,12 +298,12 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener,
             }, hour, min, true);//Yes 24 hour time
             mTimePicker.setTitle("Select Time");
             mTimePicker.show();
+        } else if(view.getId() == R.id.menu_click){
+            if(!drawer.isDrawerOpen(GravityCompat.START))
+                drawer.openDrawer(Gravity.START);
+            else
+                drawer.closeDrawer(Gravity.END);
         }
-
-
-
-//        Intent i = new Intent(this,ScheduleBooking.class);
-//        startActivity(i);
     }
 
     @Override

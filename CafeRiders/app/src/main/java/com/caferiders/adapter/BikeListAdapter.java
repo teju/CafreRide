@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.caferiders.BikeDetail;
@@ -23,10 +24,12 @@ public class BikeListAdapter extends RecyclerView.Adapter<BikeListAdapter.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         private final LinearLayout bike_item;
+        private final Button btn_book_now;
 
         public MyViewHolder(View view) {
             super(view);
             bike_item = (LinearLayout)view.findViewById(R.id.bike_item);
+            btn_book_now = (Button)view.findViewById(R.id.btn_book_now);
         }
     }
 
@@ -53,12 +56,17 @@ public class BikeListAdapter extends RecyclerView.Adapter<BikeListAdapter.MyView
                 context.startActivity(i);
             }
         });
+        holder.btn_book_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,BikeDetail.class);
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return 10;
     }
-
-
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/chevron_right"
+            android:title="Fleet" />
+        <item
+            android:id="@+id/booking_details"
+            android:icon="@drawable/chevron_right"
+            android:title="Pricing" />
+
+        <item
+            android:id="@+id/booking_completed"
+            android:icon="@drawable/chevron_right"
+            android:title="Booking History" />
+
+        <item
+            android:id="@+id/payment_history"
+            android:icon="@drawable/chevron_right"
+            android:title="Accessories" />
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/chevron_right"
+            android:title="About US" />
+
+
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/chevron_right"
+            android:title="Help" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/chevron_right"
+            android:title="LogOut" />
+
+    </group>
+
+
+</menu>

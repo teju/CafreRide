@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/black"
+    android:background="@color/dark_gray"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="@color/black"
+        android:background="@color/maroon"
         android:layout_centerVertical="true"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -27,12 +27,10 @@
                     android:layout_height="wrap_content"
                     android:text="Choose Your\n Bike"
                     android:textStyle="bold"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:textSize="14dp"
-                    android:drawablePadding="10dp"
-                    android:drawableTint="@color/green"
-                    android:drawableLeft="@drawable/account"
-
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/motorbike"
                     android:textColor="@color/white"
                     android:layout_marginTop="20dp"/>
                 <TextView
@@ -41,11 +39,10 @@
                     android:layout_height="wrap_content"
                     android:text="Choose Date\n and Time"
                     android:textStyle="bold"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:textSize="14dp"
-                    android:drawablePadding="10dp"
-                    android:drawableLeft="@drawable/account"
-                    android:drawableTint="@color/green"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/calendar_month_circle"
 
                     android:textColor="@color/white"
                     android:layout_marginTop="20dp"/>
@@ -59,13 +56,12 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Check\n Availibility"
+                    android:text="Check\nAvailibility"
                     android:textStyle="bold"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:textSize="14dp"
-                    android:drawablePadding="10dp"
-                    android:drawableLeft="@drawable/account"
-                    android:drawableTint="@color/green"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/check_box_outline"
 
                     android:textColor="@color/white"
                     android:layout_marginTop="20dp"/>
@@ -73,15 +69,13 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Confirm\n Your Booking"
+                    android:text="Confirm\nYour Booking"
                     android:textStyle="bold"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:textSize="14dp"
-                    android:drawablePadding="10dp"
-                    android:drawableLeft="@drawable/account"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/thumb_up"
                     android:textColor="@color/white"
-                    android:drawableTint="@color/green"
-
                     android:layout_marginTop="20dp"/>
 
             </LinearLayout>
@@ -192,6 +186,7 @@
                 android:layout_width="150dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="35dp"
+                android:backgroundTint="@color/green"
                 android:id="@+id/book_bike_now"
                 android:layout_marginLeft="20dp"
                 android:paddingLeft="10dp"
